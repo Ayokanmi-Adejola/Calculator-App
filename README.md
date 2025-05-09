@@ -51,7 +51,7 @@ Theme 3 (Purple):
 
 ### Live Demo
 
-- [Live Site URL]()
+- [Live Site URL](https://ayokanmi-adejola.github.io/Calculator-App/)
 
 ## My Process
 
