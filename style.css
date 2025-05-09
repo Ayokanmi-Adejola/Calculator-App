@@ -1,0 +1,327 @@
+/* Base styles and variables */
+:root {
+  /* Theme 1 variables */
+  --main-bg-1: hsl(222, 26%, 31%);
+  --keypad-bg-1: hsl(223, 31%, 20%);
+  --screen-bg-1: hsl(224, 36%, 15%);
+  --key-func-bg-1: hsl(225, 21%, 49%);
+  --key-func-shadow-1: hsl(224, 28%, 35%);
+  --key-equal-bg-1: hsl(6, 63%, 50%);
+  --key-equal-shadow-1: hsl(6, 70%, 34%);
+  --key-bg-1: hsl(30, 25%, 89%);
+  --key-shadow-1: hsl(28, 16%, 65%);
+  --text-dark-1: hsl(221, 14%, 31%);
+  --text-light-1: hsl(0, 0%, 100%);
+  
+  /* Theme 2 variables */
+  --main-bg-2: hsl(0, 0%, 90%);
+  --keypad-bg-2: hsl(0, 5%, 81%);
+  --screen-bg-2: hsl(0, 0%, 93%);
+  --key-func-bg-2: hsl(185, 42%, 37%);
+  --key-func-shadow-2: hsl(185, 58%, 25%);
+  --key-equal-bg-2: hsl(25, 98%, 40%);
+  --key-equal-shadow-2: hsl(25, 99%, 27%);
+  --key-bg-2: hsl(45, 7%, 89%);
+  --key-shadow-2: hsl(35, 11%, 61%);
+  --text-dark-2: hsl(60, 10%, 19%);
+  --text-light-2: hsl(0, 0%, 100%);
+  
+  /* Theme 3 variables */
+  --main-bg-3: hsl(268, 75%, 9%);
+  --keypad-bg-3: hsl(268, 71%, 12%);
+  --screen-bg-3: hsl(268, 71%, 12%);
+  --key-func-bg-3: hsl(281, 89%, 26%);
+  --key-func-shadow-3: hsl(285, 91%, 52%);
+  --key-equal-bg-3: hsl(176, 100%, 44%);
+  --key-equal-shadow-3: hsl(177, 92%, 70%);
+  --key-bg-3: hsl(268, 47%, 21%);
+  --key-shadow-3: hsl(290, 70%, 36%);
+  --text-dark-3: hsl(198, 20%, 13%);
+  --text-light-3: hsl(52, 100%, 62%);
+  --text-white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Theme specific styles */
+.theme-1 {
+  background-color: var(--main-bg-1);
+  color: var(--text-light-1);
+}
+
+.theme-2 {
+  background-color: var(--main-bg-2);
+  color: var(--text-dark-2);
+}
+
+.theme-3 {
+  background-color: var(--main-bg-3);
+  color: var(--text-light-3);
+}
+
+/* Calculator container */
+.calculator-container {
+  width: 100%;
+  max-width: 540px;
+  margin-bottom: 2rem;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+.theme-switcher {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.theme-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theme-numbers {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.toggle {
+  width: 70px;
+  height: 26px;
+  border-radius: 13px;
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.theme-1 .toggle {
+  background-color: var(--keypad-bg-1);
+}
+
+.theme-2 .toggle {
+  background-color: var(--keypad-bg-2);
+}
+
+.theme-3 .toggle {
+  background-color: var(--keypad-bg-3);
+}
+
+.toggle-btn {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.theme-1 .toggle-btn {
+  background-color: var(--key-equal-bg-1);
+  transform: translateX(0);
+}
+
+.theme-2 .toggle-btn {
+  background-color: var(--key-equal-bg-2);
+  transform: translateX(22px);
+}
+
+.theme-3 .toggle-btn {
+  background-color: var(--key-equal-bg-3);
+  transform: translateX(44px);
+}
+
+/* Display styles */
+.display {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  text-align: right;
+  overflow: hidden;
+}
+
+.theme-1 .display {
+  background-color: var(--screen-bg-1);
+}
+
+.theme-2 .display {
+  background-color: var(--screen-bg-2);
+}
+
+.theme-3 .display {
+  background-color: var(--screen-bg-3);
+}
+
+#result {
+  font-size: 2.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Keypad styles */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.theme-1 .keypad {
+  background-color: var(--keypad-bg-1);
+}
+
+.theme-2 .keypad {
+  background-color: var(--keypad-bg-2);
+}
+
+.theme-3 .keypad {
+  background-color: var(--keypad-bg-3);
+}
+
+.key {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.75rem 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.key:active {
+  transform: translateY(2px);
+}
+
+.theme-1 .key {
+  background-color: var(--key-bg-1);
+  box-shadow: 0 4px 0 var(--key-shadow-1);
+  color: var(--text-dark-1);
+}
+
+.theme-2 .key {
+  background-color: var(--key-bg-2);
+  box-shadow: 0 4px 0 var(--key-shadow-2);
+  color: var(--text-dark-2);
+}
+
+.theme-3 .key {
+  background-color: var(--key-bg-3);
+  box-shadow: 0 4px 0 var(--key-shadow-3);
+  color: var(--text-light-3);
+}
+
+.key-function {
+  font-size: 1rem;
+}
+
+.theme-1 .key-function {
+  background-color: var(--key-func-bg-1);
+  box-shadow: 0 4px 0 var(--key-func-shadow-1);
+  color: var(--text-light-1);
+}
+
+.theme-2 .key-function {
+  background-color: var(--key-func-bg-2);
+  box-shadow: 0 4px 0 var(--key-func-shadow-2);
+  color: var(--text-light-2);
+}
+
+.theme-3 .key-function {
+  background-color: var(--key-func-bg-3);
+  box-shadow: 0 4px 0 var(--key-func-shadow-3);
+  color: var(--text-light-2);
+}
+
+.key-equals {
+  font-size: 1rem;
+}
+
+.theme-1 .key-equals {
+  background-color: var(--key-equal-bg-1);
+  box-shadow: 0 4px 0 var(--key-equal-shadow-1);
+  color: var(--text-light-1);
+}
+
+.theme-2 .key-equals {
+  background-color: var(--key-equal-bg-2);
+  box-shadow: 0 4px 0 var(--key-equal-shadow-2);
+  color: var(--text-light-2);
+}
+
+.theme-3 .key-equals {
+  background-color: var(--key-equal-bg-3);
+  box-shadow: 0 4px 0 var(--key-equal-shadow-3);
+  color: var(--text-dark-3);
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+/* Attribution styles */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.theme-1 .attribution a {
+  color: var(--key-equal-bg-1);
+}
+
+.theme-2 .attribution a {
+  color: var(--key-equal-bg-2);
+}
+
+.theme-3 .attribution a {
+  color: var(--key-equal-bg-3);
+}
+
+/* Media queries */
+@media (max-width: 375px) {
+  .calculator-container {
+    max-width: 100%;
+  }
+  
+  .keypad {
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  
+  .key {
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
+  }
+}
