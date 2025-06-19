@@ -3,20 +3,7 @@
 This is my solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 
-## Table of Contents
 
-- [Overview](#overview)
-  - [The Challenge](#the-challenge)
-  - [Features](#features)
-  - [Screenshots](#screenshots)
-  - [Live Demo](#live-demo)
-- [My Process](#my-process)
-  - [Built With](#built-with)
-  - [What I Learned](#what-i-learned)
-  - [Continued Development](#continued-development)
-- [How To Use](#how-to-use)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -49,9 +36,7 @@ Theme 2 (Light):
 Theme 3 (Purple):
 ![Theme 3](./design/desktop-design-theme-3.jpg)
 
-### Live Demo
 
-- [Live Site URL](https://ayokanmi-adejola.github.io/Calculator-App/)
 
 ## My Process
 
@@ -133,9 +118,7 @@ In future projects, I'd like to focus on:
 
 ## Author
 
-- Website - [Ayokanmi Adejola](https://ayokanmi-adejola-portfolio.netlify.app/)
 - Frontend Mentor - [@Ayokanmi-Adejola](https://www.frontendmentor.io/profile/Ayokanmi-Adejola)
-- Twitter - [@AyokanmiAdejola](https://x.com/AyoAdejola100)
 
 ## Acknowledgments
 
